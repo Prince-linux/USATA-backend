@@ -9,3 +9,7 @@ class RegistrationAdmin(admin.ModelAdmin):
     )
     search_fields = ('first_name', 'last_name', 'email', 'company_name')
     list_filter = ('state',)
+
+admin.site.site_header = "USATA Admin Panel"
+admin.site.site_title = "USATA Admin"
+admin.site.index_title = "Welcome to the USATA Dashboard"

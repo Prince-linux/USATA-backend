@@ -20,11 +20,11 @@ class USATAAdminSite(admin.AdminSite):
 admin_site = USATAAdminSite(name='usata_admin')
 
 # 3. Now register models using your custom admin site
-@admin.register(Registration, site=admin_site)
+@admin.register(Registration)
 class RegistrationAdmin(admin.ModelAdmin):
     list_display = (
         'first_name', 'last_name', 'email', 'phone', 'job_title', 'company_name',
-        'company_address', 'state', 'zip_code'
+        'company_address', 'state', 'zip_code', "created_at"
     )
     search_fields = ('first_name', 'last_name', 'email', 'company_name')
     list_filter = ('state',)

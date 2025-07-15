@@ -12,6 +12,7 @@ class Registration(models.Model):
     zip_code = models.CharField(max_length=20)
     interested_countries = models.JSONField()  # Stores list of strings
     created_at = models.DateTimeField(auto_now_add=True)
+    status = models.BooleanField(default=False)
 
     def __str__(self):
         return f"{self.first_name} {self.last_name}"

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="x-apple-disable-message-reformatting" />
+    <title>{{ title }}</title>
+  </head>
+  <body style="margin:0; padding:0; font-family:Arial, sans-serif; background-color:#f4f4f4; width:100%; line-height:1.6;">
+    <table style="background-color:rgb(244,244,244)" width="100%" border="0" cellspacing="0" cellpadding="0" height="100%" id="x_bodyTable">
+      <tbody>
+        <tr>
+          <td align="center" valign="top" class="x_bodyCell">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" id="x_root">
+              <tbody class="x_mceWrapper">
+                <tr>
+                  <td style="background-color:transparent" align="center" valign="top" class="x_mceSectionHeader">
+                    <table style="max-width:660px" width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tbody>
+                        <tr>
+                          <td style="background-color:#ffffff" valign="top" class="x_mceWrapperInner">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+                              <tbody>
+                                <tr class="x_mceRow">
+                                  <td style="background-position:center; background-repeat:no-repeat; background-size:cover" valign="top">
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                      <tbody>
+                                        <tr>
+                                          <td style="padding-top:0; padding-bottom:0" colspan="12" valign="top" class="x_mceColumn" width="100%">
+                                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                              <tbody>
+                                                <tr>
+                                                  <td style="padding-top:12px; padding-bottom:12px; padding-right:0; padding-left:0; border:0; border-radius:0" align="center" valign="top" class="x_mceImageBlockContainer">
+                                                    <div></div>
+                                                    <a href="{{ organization_url|default:'https://usata.co' }}" style="display:block" target="_blank">
+                                                      <table style="border-collapse:separate; margin:0; vertical-align:top; max-width:85%; width:85%; height:auto" width="85%" border="0" cellspacing="0" cellpadding="0" align="center">
+                                                        <tbody>
+                                                          <tr>
+                                                            <td style="border:0; border-radius:0; margin:0" valign="top">
+                                                              <img src="{{ logo_url }}" width="561" height="auto" class="x_imageDropZone x_mceImage" style="display:block; max-width:100%; height:auto; border-radius:0">
+                                                            </td>
+                                                          </tr>
+                                                        </tbody>
+                                                      </table>
+                                                    </a>
+                                                    <div></div>
+                                                    <div></div>
+                                                  </td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="x_mceWrapper">
+                <tr>
+                  <td style="background-color:transparent" align="center" valign="top" class="x_mceSectionBody">
+                    <table style="max-width:660px" width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tbody>
+                        <tr>
+                          <td style="background-color:#ffffff" valign="top" class="x_mceWrapperInner">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+                              <tbody>
+                                <tr class="x_mceRow">
+                                  <td style="background-position:center; background-repeat:no-repeat; background-size:cover" valign="top">
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                      <tbody>
+                                        <tr>
+                                          <td style="padding-top:0; padding-bottom:0" colspan="12" valign="top" class="x_mceColumn" width="100%">
+                                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                              <tbody>
+                                                <tr>
+                                                  <td style="padding-top:0; padding-bottom:0; padding-right:0; padding-left:0; border:0; border-radius:0" valign="top">
+                                                    <table style="border:0; border-radius:0; border-collapse:separate" width="100%">
+                                                      <tbody>
+                                                        <tr>
+                                                          <td style="padding-left:24px; padding-right:24px; padding-top:12px; padding-bottom:12px" class="x_mceTextBlockContainer">
+                                                            <div style="width:100%" class="x_mceText" id="x_d5">
+                                                              {{ content|safe }}
+
+                                                              {% if webinar_title %}
+                                                              <h4 style="text-align:left"><span style="color:rgb(0,0,0)"><span style="font-size:14px"><span style="font-family:'Helvetica Neue',Helvetica,Arial,Verdana,sans-serif"><span style="font-weight:normal"><span style="background-color:rgb(255,255,255)">{{ webinar_title }}</span></span></span></span></span></h4>
+                                                              {% endif %}
+
+                                                              {% if webinar_details %}
+                                                              <h4 style="text-align:left"><span style="color:#000000"><span style="font-size:14px"><span style="font-family:'Helvetica Neue',Helvetica,Arial,Verdana,sans-serif"><span style="font-weight:normal"><span style="background-color:rgb(255,255,255)">{{ webinar_details|safe }}</span></span></span></span></span></h4>
+                                                              {% endif %}
+
+                                                              {% if agenda_image_url %}
+                                                              <p><strong>AGENDA</strong></p>
+                                                              <p><img src="{{ agenda_image_url }}" width="612" height="473" style="max-width:100%"></p>
+                                                              {% endif %}
+
+                                                              {% if deliverables %}
+                                                              <h3 style="box-sizing:border-box; border:0px solid; margin:32px 0px 8px; padding:0px; line-height:1.4; font-variant-ligatures:normal; font-variant-caps:normal; letter-spacing:normal; orphans:2; text-align:left; text-indent:0px; text-transform:none; widows:2; word-spacing:0px; white-space:normal; background-color:rgb(255,255,255); text-decoration-style:initial; text-decoration-color:initial" class="x_text-xl x_font-semibold x_mt-8 x_mb-2 x_text-black">
+                                                                <strong><span style="color:#000000"><span style="font-size:12px"><span style="font-family:'Helvetica Neue',Helvetica,Arial,Verdana,sans-serif"><span style="background-color:rgb(255,255,255)">SME Deliverables</span></span></span></span></strong></h3>
+                                                              <ul>
+                                                                {% for item in deliverables %}
+                                                                <li style="color:#000000">
+                                                                  <p><span style="color:#000000"><span style="font-size:12px"><span style="font-family:'Helvetica Neue',Helvetica,Arial,Verdana,sans-serif"><span style="background-color:rgb(255,255,255)">{{ item }}</span></span></span></span></p>
+                                                                </li>
+                                                                {% endfor %}
+                                                              </ul>
+                                                              {% endif %}
+
+                                                              <p class="x_MsoNormal" style="margin-bottom:0in; line-height:normal; background:white">
+                                                                <br>
+                                                              </p>
+                                                              <p class="x_MsoNormal" style="margin-bottom:0in; line-height:normal; background:white">
+                                                                <span style="color:#000000"><span style="font-size:14px"><span style="font-family:'Helvetica Neue',Helvetica,Arial,Verdana,sans-serif"><span style="background-color:white">Much Appreciation!</span></span></span></span></p>
+                                                              <p class="x_MsoNormal" style="margin-bottom:0in; line-height:normal; background:white">
+                                                                <span style="color:#000000"><span style="font-size:14px"><span style="font-family:'Helvetica Neue',Helvetica,Arial,Verdana,sans-serif"><span style="background-color:white">{{ footer_label }}</span></span></span></span></p>
+                                                            </div>
+                                                          </td>
+                                                        </tr>
+                                                      </tbody>
+                                                    </table>
+                                                  </td>
+                                                </tr>
+                                                {% if button_title and button_link %}
+                                                <tr>
+                                                  <td style="padding-top:12px; padding-bottom:12px; padding-right:24px; padding-left:24px; border:0; border-radius:0" align="center" valign="top" class="x_mceButtonBlockContainer">
+                                                    <div></div>
+                                                    <table border="0" cellspacing="0" cellpadding="0" align="center" class="x_mceButtonContainer">
+                                                      <tbody>
+                                                        <tr class="x_mceStandardButton">
+                                                          <td style="background-color:#000000; border-radius:50px; text-align:center" valign="top" class="x_mceButton">
+                                                            <a class="x_mceButtonLink" href="{{ button_link }}" style="background-color:#000000; border-radius:50px; border:2px solid #000000; color:#ffffff; display:block; font-family:'Helvetica Neue',Helvetica,Arial,Verdana,sans-serif; font-size:16px; font-weight:normal; font-style:normal; padding:16px 28px; text-decoration:none; text-align:center; direction:ltr; letter-spacing:0px" target="_blank">
+                                                              {{ button_title }}
+                                                            </a>
+                                                          </td>
+                                                        </tr>
+                                                      </tbody>
+                                                    </table>
+                                                    <div></div>
+                                                  </td>
+                                                </tr>
+                                                {% endif %}
+                                              </tbody>
+                                            </table>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="x_mceWrapper">
+                <tr>
+                  <td style="background-color:transparent" align="center" valign="top" class="x_mceSectionFooter">
+                    <table style="max-width:660px" width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tbody>
+                        <tr>
+                          <td style="background-color:#ffffff" valign="top" class="x_mceWrapperInner">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+                              <tbody>
+                                <tr class="x_mceRow">
+                                  <td style="background-position:center; background-repeat:no-repeat; background-size:cover" valign="top">
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                      <tbody>
+                                        <tr>
+                                          <td style="padding-top:0; padding-bottom:0" colspan="12" valign="top" class="x_mceColumn" width="100%">
+                                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                              <tbody>
+                                                <tr>
+                                                  <td style="background-color:#f4f4f4; padding-top:8px; padding-bottom:8px; padding-right:8px; padding-left:8px; border:0; border-radius:0" valign="top">
+                                                    <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="x_mceFooterSection">
+                                                      <tbody>
+                                                        <tr class="x_mceRow">
+                                                          <td style="background-color:#f4f4f4; background-position:center; background-repeat:no-repeat; background-size:cover; padding-top:0px; padding-bottom:0px" valign="top">
+                                                            <table width="100%" border="0" cellspacing="12" cellpadding="0">
+                                                              <tbody>
+                                                                <tr>
+                                                                  <td style="padding-top:0; padding-bottom:0" colspan="12" valign="top" class="x_mceColumn" width="100%">
+                                                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                                      <tbody>
+                                                                        <tr>
+                                                                          <td style="padding-top:0; padding-bottom:0; padding-right:0; padding-left:0; border:0; border-radius:0" align="center" valign="top">
+                                                                            <table style="border:0; border-radius:0; border-collapse:separate" width="100%">
+                                                                              <tbody>
+                                                                                <tr>
+                                                                                  <td style="padding-left:16px; padding-right:16px; padding-top:12px; padding-bottom:12px" class="x_mceTextBlockContainer">
+                                                                                    <div style="display:inline-block; width:100%" class="x_mceText">
+                                                                                      <p class="x_last-child">
+                                                                                        <a href="{{ unsubscribe_url|default:'#' }}" target="_blank"><span style="font-size:11px">Unsubscribe</span></a>
+                                                                                        <span style="font-size:11px"> | </span>
+                                                                                        <a href="{{ preferences_url|default:'#' }}" target="_blank"><span style="font-size:11px">Update Preferences</span></a>
+                                                                                        <span style="font-size:11px"><br>{{ footer_label }}</span>
+                                                                                      </p>
+                                                                                    </div>
+                                                                                  </td>
+                                                                                </tr>
+                                                                              </tbody>
+                                                                            </table>
+                                                                          </td>
+                                                                        </tr>
+                                                                      </tbody>
+                                                                    </table>
+                                                                  </td>
+                                                                </tr>
+                                                              </tbody>
+                                                            </table>
+                                                          </td>
+                                                        </tr>
+                                                      </tbody>
+                                                    </table>
+                                                  </td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

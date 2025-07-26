@@ -5,6 +5,7 @@ from .models import Registration
 from .serializers import RegistrationSerializer
 import feedparser, requests
 from bs4 import BeautifulSoup
+from .mailing import send_webinar_registration_email
 
 
 # Static data (can later move to DB if needed)
@@ -106,7 +107,11 @@ class RegistrationAPIView(APIView):
     def post(self, request):
         serializer = RegistrationSerializer(data=request.data)
         if serializer.is_valid():
-            serializer.save()
+            registration = serializer.save()
+
+            # Send confirmation email
+            send_webinar_registration_email(registration)
+
             return Response({"message": "Registration successful!"}, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 

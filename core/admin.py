@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Registration
+from .models import Registration, Survey
 from django.urls import path
 from django.http import HttpResponseRedirect
 
@@ -28,3 +28,19 @@ class RegistrationAdmin(admin.ModelAdmin):
     )
     search_fields = ('first_name', 'last_name', 'email', 'company_name')
     list_filter = ('state',)
+
+@admin.register(Survey)
+class SurveyAdmin(admin.ModelAdmin):
+    list_display = (
+        'email',
+        'understanding_before',
+        'understanding_after',
+        'likely_to_register_future',
+        'interested_in_advisory',
+        'willing_to_speak',
+        'submitted_at',
+    )
+    list_filter = ('likely_to_register_future', 'interested_in_advisory', 'willing_to_speak')
+    search_fields = ('most_valuable_topics', 'confidence_in_next_steps', 'pricing_sensitivity', 'what_to_learn_next')
+    readonly_fields = ('submitted_at',)
+

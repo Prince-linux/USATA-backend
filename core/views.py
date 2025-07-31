@@ -1,8 +1,8 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
-from .models import Registration
-from .serializers import RegistrationSerializer
+from .models import Registration, Survey
+from .serializers import RegistrationSerializer, SurveySerializer
 import feedparser, requests
 from bs4 import BeautifulSoup
 from .mailing import send_webinar_registration_email
@@ -113,6 +113,19 @@ class RegistrationAPIView(APIView):
             send_webinar_registration_email(registration)
 
             return Response({"message": "Registration successful!"}, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    
+class SurveyAPIView(APIView):
+    def get(self, request):
+        surveys = Survey.objects.all()
+        serializer = SurveySerializer(surveys, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+    
+    def post(self, request):
+        serializer = SurveySerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response({"message": "Survey submitted!"}, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
